@@ -21,6 +21,7 @@ namespace DataAccess.Concrete.InMemory
                 new Car{ Id=5,ColorId=3,BrandId=5,DailyPrice=300,ModelYear=2007,Description="Sıfır"},
             };//car
             //hello
+            //araba
         }
         public void Add(Car car)
         {
