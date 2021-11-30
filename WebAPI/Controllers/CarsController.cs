@@ -80,7 +80,7 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost("GetCarDetails")]
+        [HttpGet("GetCarDetails")]
         public IActionResult GetCarDetails()
         {
             var result = _carService.GetCarDetails();
