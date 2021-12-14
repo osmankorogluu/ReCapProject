@@ -1,11 +1,11 @@
 ﻿using Business.Abstract;
+using Business.Business.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns;
 using Core.DataAccess;
-using Core.Utilities.Results.Abstract;
-using Core.Utilities.Results.Concrete;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -25,7 +25,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {

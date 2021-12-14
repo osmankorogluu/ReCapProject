@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,10 +59,7 @@ namespace Business.Constants
         public static string ColorUpdate = "Renk Güncellendi";
         public static string ColorDetail = "Renk Detayı Getirildi";
         public static string ColorListed = "Renk Listelendi";
-        internal static string ColorNameInvalid = "Renk ismi geçersiz";
-
-
-
-
+        public static string ColorNameInvalid = "Renk ismi geçersiz";
+        public static string  AuthorizationDenied = "Yetkin yok";
     }
 }

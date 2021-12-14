@@ -1,16 +1,13 @@
-﻿using Core.Utilities.Results.Abstract;
-using Core.Utilities.Results.Concrete;
+﻿using Core.Utilities.Results;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.Utilities.Helpers
 {
-   public class FileHelper
+    public class FileHelper
     {
         private static string _currentDirectory = Environment.CurrentDirectory + "\\wwwroot";
         private static string _folderName = "\\images\\";
@@ -115,6 +112,5 @@ namespace Core.Utilities.Helpers
             }
 
         }
-
     }
 }
