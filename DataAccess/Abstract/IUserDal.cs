@@ -4,6 +4,7 @@ using System.Text;
 using Core.Entites.Concrete;
 using System.Collections.Generic;
 using Core.DataAccess;
+using Core.Utilities.Results;
 
 namespace DataAccess.Abstract
 {

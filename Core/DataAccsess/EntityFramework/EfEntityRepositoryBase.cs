@@ -1,5 +1,6 @@
 ﻿using Core.DataAccess;
 using Core.Entites;
+using Core.Utilities.Results;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -49,7 +50,7 @@ namespace Core.DataAccsess.EntityFramework
             }
         }
 
-        public void Update(TEntity entity)
+        public void Update(TEntity entity)//baktık ama yeni derslere yapmadım hatayı 
         {
             using (TContext context = new TContext())
             {

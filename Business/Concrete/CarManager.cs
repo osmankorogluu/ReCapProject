@@ -32,42 +32,42 @@ namespace Business.Concrete
            // ValidationTool.Validate(new CarValidator(), car);
 
             _carDal.Add(car);
-            return new SuccessResult(Messages.CarAdded);
+            return new SuccessResult(Messages.Added);
 
         }
 
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
-            return new SuccessResult(Messages.CarDeleted);
+            return new SuccessResult(Messages.Deleted);
         }
 
         public IDataResult<List<Car>> GetAll()
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarsListed);
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.Listed);
         }
 
         public IDataResult<List<Car>> GetAllByBrandId(int brandId)
         {
 
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(z => z.BrandId == brandId), Messages.CarsListed);
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(z => z.BrandId == brandId), Messages.Listed);
         }
 
         public IDataResult<List<Car>> GetAllByColorId(int colorId)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(z => z.ColorId == colorId), Messages.CarsListed);
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(z => z.ColorId == colorId), Messages.Listed);
         }
 
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.CarDetail);
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.Detail);
         }
 
         public IResult Update(Car car)
         {
             _carDal.Update(car);
-            return new SuccessResult(Messages.CarUpdated);
+            return new SuccessResult(Messages.Updated);
         }
 
 
